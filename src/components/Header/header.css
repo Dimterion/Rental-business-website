@@ -1,0 +1,22 @@
+.header-block {
+  color: #ff6060;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  justify-content: space-between;
+}
+
+img {
+  object-fit: contain;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+.active {
+  text-decoration: underline;
+}
