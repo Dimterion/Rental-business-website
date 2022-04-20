@@ -1,4 +1,4 @@
-.header-block {
+.header-container {
   color: #ff6060;
   display: flex;
   font-family: "Montserrat", sans-serif;
@@ -6,17 +6,17 @@
   justify-content: space-between;
 }
 
-img {
+.header-logo {
   object-fit: contain;
 }
 
-ul {
+.header-nav {
   display: flex;
   flex-direction: row;
   list-style: none;
   padding: 0;
 }
 
-.active {
+.header-nav-active {
   text-decoration: underline;
 }
