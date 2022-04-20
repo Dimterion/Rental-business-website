@@ -5,7 +5,7 @@ export default function Gallery() {
 
   React.useEffect(function () {
     fetch(
-      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/data.json"
+      "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.json"
     )
       .then((res) => res.json())
       .then((data) => setApartmentsData(data));
@@ -15,5 +15,5 @@ export default function Gallery() {
     <div>
       <pre>{JSON.stringify(apartmentsData, null, 2)}</pre>
     </div>
-  )
+  );
 }
