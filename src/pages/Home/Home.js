@@ -1,12 +1,13 @@
 import Gallery from "../../components/Gallery/Gallery";
-import Header from "../../components/Header/Header";
-import Section from "../../components/Section/Section";
+import Hero from "../../components/Hero/Hero";
+import heroBackground from "../../assets/kasa-hero-background.png";
+
+const homePageHeroText = "Home anywhere and everywhere";
 
 export default function Home() {
   return (
     <div>
-      <Header />
-      <Section />
+      <Hero heroImg={heroBackground} heroText={homePageHeroText} />
       <Gallery />
     </div>
   );

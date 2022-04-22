@@ -2,7 +2,7 @@
   color: #ff6060;
   display: flex;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 2rem;
   justify-content: space-between;
 }
 
@@ -15,8 +15,4 @@
   flex-direction: row;
   list-style: none;
   padding: 0;
-}
-
-.header-nav-active {
-  text-decoration: underline;
 }

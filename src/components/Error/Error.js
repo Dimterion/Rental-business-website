@@ -1,3 +1,3 @@
 export default function Error() {
-  return <div></div>;
+  return <div>404</div>;
 }
