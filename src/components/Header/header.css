@@ -1,7 +1,6 @@
 .header-container {
   color: #ff6060;
   display: flex;
-  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   justify-content: space-between;
 }

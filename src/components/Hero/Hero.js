@@ -1,4 +1,5 @@
 import "./hero.css";
+import PropTypes from "prop-types";
 
 export default function Hero(props) {
   return (
@@ -8,3 +9,12 @@ export default function Hero(props) {
     </div>
   );
 }
+
+Hero.propTypes = {
+  heroImg: PropTypes.string.isRequired,
+  heroText: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  heroText: "",
+};

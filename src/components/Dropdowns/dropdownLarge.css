@@ -1,0 +1,21 @@
+.dropdownLarge-container {
+  background-color: #F6F6F6;
+  border-radius: 5px;
+}
+
+.dropdownLarge-header-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: #ff6060;
+  border-radius: 5px;
+  color: white;
+}
+
+.dropdown-arrow-down {
+  object-fit: contain;
+}
+
+.dropdown-text-container {
+  color: #ff6060;
+}
