@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import allApartments from "../../assets/kasa-apartments-data";
+//import allApartments from "../../../public/kasa-apartments-data";
 
 export default function Home() {
   const { apartmentId } = useParams();
