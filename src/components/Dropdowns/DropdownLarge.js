@@ -1,11 +1,7 @@
 import arrowDown from "../../assets/arrow-down.png";
 import arrowUp from "../../assets/arrow-up.png";
-import styled from "styled-components";
-import colors from "../../utils/colors";
 import "./dropdownLarge.css";
 import { useState } from "react";
-
-const DropDownHeaderContainer = styled.span``;
 
 export default function DropdownLarge() {
   const [isOpen, setIsOpen] = useState(false);

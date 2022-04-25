@@ -2,19 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import allApartments from "../../assets/kasa-apartments-data";
 import "./gallery.css";
+import { useFetch } from "../../utils/hooks/fetch";
 
 export default function Gallery() {
-  const [allApartments, setAllApartments] = React.useState([]);
-  console.log(allApartments[0]);
-  React.useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.js"
-    )
-      .then((res) => res.json())
-      .then((data) => setAllApartments(data));
-  }, []);
+  // const [allApartments, setAllApartments] = React.useState([]);
+  // // console.log(allApartments[0]);
+  // React.useEffect(() => {
+  //   fetch(
+  //     "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.json"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((apartmentsData) => setAllApartments(apartmentsData))
+  //     .catch((error) => console.log(error));
+  // }, []);
+  const { data, loading, error } = useFetch(
+    "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.json"
+  );
 
-  const galleryItem = allApartments.map((apartment) => {
+  const galleryItem = data.map((apartment) => {
     return (
       <Link to={`/apartment/${apartment.id}`} key={apartment.id}>
         <img
@@ -27,7 +32,15 @@ export default function Gallery() {
     );
   });
 
+  if (error) {
+    return <span>Page is not loading.</span>;
+  }
+
   //console.log(galleryItem);
 
-  return <div className="gallery-container">{galleryItem}</div>;
+  return loading ? (
+    <div>Page is loading</div>
+  ) : (
+    <div className="gallery-container">{galleryItem}</div>
+  );
 }
