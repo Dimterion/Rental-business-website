@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import allApartments from "../../assets/kasa-apartments-data";
+// import allApartments from "../../assets/kasa-apartments-data";
 import "./gallery.css";
 
 export default function Gallery() {
-  // const [allApartments, setAllApartments] = React.useState([]);
-  // console.log(allApartments[0]);
-  // React.useEffect(() => {
-  //   fetch(
-  //     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/data.json"
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => setAllApartments(data));
-  // }, []);
+  const [allApartments, setAllApartments] = React.useState([]);
+  console.log(allApartments[0]);
+  React.useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.js"
+    )
+      .then((res) => res.json())
+      .then((data) => setAllApartments(data));
+  }, []);
 
   const galleryItem = allApartments.map((apartment) => {
     return (
