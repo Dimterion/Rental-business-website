@@ -1,3 +1,31 @@
 .carousel-container {
-  display: flex;
+  margin: 0;
+}
+
+.carousel-image {
+  border-radius: 25px;
+  object-fit: cover;
+  height: 45vh;
+  width: 100%;
+}
+
+.left-arrow {
+  object-fit: contain;
+  position: relative;
+  left: 2vw;
+  top: -28vh;
+}
+
+.right-arrow {
+  object-fit: contain;
+  position: relative;
+  left: 85vw;
+  top: -28vh;
+}
+
+.counter-container {
+  color: white;
+  position: relative;
+  left: 39vw;
+  top: -11vh;
 }
