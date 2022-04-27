@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Header from "../Header/Header";
 import styled from "styled-components";
 import colors from "../../utils/colors/colors";
 
@@ -23,6 +24,7 @@ const LinkContainer = styled(Link)`
 export default function Error() {
   return (
     <ErrorContainer>
+      <Header />
       <h2>404</h2>
       <p>Oops! It looks like this page doesn't exist.</p>
       <LinkContainer to="/">Go back to home page</LinkContainer>

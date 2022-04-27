@@ -1,29 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import allApartments from "../../assets/kasa-apartments-data";
-import "./gallery.css";
 import { useFetch } from "../../utils/hooks/fetch";
+import "./gallery.css";
 
 export default function Gallery() {
-  // const [allApartments, setAllApartments] = React.useState([]);
-  // // console.log(allApartments[0]);
-  // React.useEffect(() => {
-  //   fetch(
-  //     "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.json"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((apartmentsData) => setAllApartments(apartmentsData))
-  //     .catch((error) => console.log(error));
-  // }, []);
+  // Using fetch hook to get the data from API
   const { data, loading, error } = useFetch(
     "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.json"
   );
 
+  // Using .map to create a container for each gallery item
   const galleryItem = data.map((apartment) => {
     return (
-      <Link to={`/apartment/${apartment.id}`} key={apartment.id}>
+      <Link
+        to={`/apartment/${apartment.id}`}
+        key={apartment.id}
+        className="gallery-item"
+      >
         <img
-          className="gallery-item"
+          className="gallery-item-image"
           src={apartment.cover}
           alt={apartment.title}
         />
@@ -32,12 +27,12 @@ export default function Gallery() {
     );
   });
 
+  // Displaying error if the data from API is not loading
   if (error) {
     return <span>Page is not loading.</span>;
   }
 
-  //console.log(galleryItem);
-
+  // Displaying the loading message while the data is loading, then displaying the data itself
   return loading ? (
     <div>Page is loading</div>
   ) : (

@@ -7,6 +7,8 @@ import Location from "../../components/Location/Location";
 import Tag from "../../components/Tag/Tag";
 import Profile from "../../components/Profile/Profile";
 import Rating from "../../components/Rating/Rating";
+import DropdownSmall from "../../components/Dropdowns/DropdownSmall";
+import Header from "../../components/Header/Header";
 
 export default function Apartment() {
   const { data, loading, error } = useFetch(
@@ -27,6 +29,7 @@ export default function Apartment() {
   let tagsElements;
   let profileName;
   let profilePicture;
+  let rating;
   data.forEach((apartment) => {
     if (apartmentId === apartment.id) {
       const lowerCaseApartment = toLowerKeys(apartment);
@@ -38,6 +41,7 @@ export default function Apartment() {
       });
       profileName = lowerCaseApartment.host.name;
       profilePicture = lowerCaseApartment.host.picture;
+      rating = lowerCaseApartment.rating;
     }
   });
 
@@ -49,6 +53,7 @@ export default function Apartment() {
     <div>Page is loading</div>
   ) : (
     <div>
+      <Header headerNavHome="header-nav-home" headerNavAbout="header-nav-about"/>
       <Carousel />
       <div>
         <Title title={title} />
@@ -57,7 +62,11 @@ export default function Apartment() {
       </div>
       <div>
         <Profile profileName={profileName} profilePicture={profilePicture} />
-        <Rating />
+        <Rating rating={rating} />
+      </div>
+      <div>
+        <DropdownSmall dropDownSmallTitle="Description" />
+        <DropdownSmall dropDownSmallTitle="Equipments" />
       </div>
     </div>
   );
