@@ -1,10 +1,26 @@
+:root {
+  --secondaryColor: #ffffff;
+  --footer-background-color: #000000;
+}
+
 .footer-container {
-  background-color: black;
+  background-color: var(--footer-background-color);
+  margin-top: 2vw;
+  padding: 5vw;
   text-align: center;
 }
 
 .footer-text {
-  color: white;
+  color: var(--secondaryColor);
   font-size: 1rem;
   font-weight: 100;
+  padding-top: 1vw;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .footer-container {
+    padding: 2vh;
+  }
 }

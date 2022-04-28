@@ -4,6 +4,7 @@
 
 .hero-container {
   color: var(--secondaryColor);
+  margin: 2vw;
 }
 
 .hero-text {
@@ -11,7 +12,7 @@
   font-weight: 100;
   margin: 0 2vw;
   position: absolute;
-  top: 17vw;
+  top: 18vw;
   width: 25vh;
 }
 

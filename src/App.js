@@ -7,8 +7,9 @@ import Error from "./components/Error/Error";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
-  div {
+  * {
     font-family: "Montserrat", sans-serif;
+    margin: 0;
   }
 `;
 

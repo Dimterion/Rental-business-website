@@ -29,12 +29,16 @@ export default function Gallery() {
 
   // Displaying error if the data from API is not loading
   if (error) {
-    return <span>Page is not loading.</span>;
+    return (
+      <span className="status-message-container">
+        Page is not loading. Try refreshing it or check again later.
+      </span>
+    );
   }
 
   // Displaying the loading message while the data is loading, then displaying the data itself
   return loading ? (
-    <div>Page is loading</div>
+    <span className="status-message-container">Page is loading...</span>
   ) : (
     <div className="gallery-container">{galleryItem}</div>
   );
