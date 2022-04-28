@@ -6,11 +6,15 @@ import arrowLeft from "../../assets/arrow-left.png";
 import "../Carousel/carousel.css";
 
 export default function Carousel() {
+  // Using fetch hook to get the data from API
   const { data, loading, error } = useFetch(
     "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.json"
   );
+  // Getting the ID from the address link to generate proper content for each gallery item
   const { apartmentId } = useParams();
+  // useState to set index to count pictures in the carousel
   const [index, setIndex] = React.useState(0);
+  // Getting url for each picture and length for each of the pictures array
   let url = "";
   let counter = 0;
 
@@ -21,10 +25,12 @@ export default function Carousel() {
     }
   });
 
+  // Displaying error if the data from API is not loading
   if (error) {
     return <span>Page is not loading.</span>;
   }
 
+  // Functions to implement right and left arrows clicks
   function rightArrowClick() {
     if (index < counter - 1) {
       setIndex(index + 1);
