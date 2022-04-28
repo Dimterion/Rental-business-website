@@ -9,7 +9,7 @@ export default function Gallery() {
     "https://raw.githubusercontent.com/Dimterion/rental-business-website/master/src/assets/kasa-apartments-data.json"
   );
 
-  // Using .map to create a container for each gallery item
+  // Using .map to create a component for each gallery item
   const galleryItem = data.map((apartment) => {
     return (
       <Link

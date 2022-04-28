@@ -1,21 +1,67 @@
+:root {
+  --primaryColor: #ff6060;
+  --secondaryColor: #ffffff;
+  --mainBackgroundColor: #ececec;
+}
+
 .dropdownLarge-container {
-  background-color: #f6f6f6;
+  background-color: var(--mainBackgroundColor);
   border-radius: 5px;
+  margin: 4vh 2vw;
 }
 
 .dropdownLarge-header-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  background-color: #ff6060;
+  background-color: var(--primaryColor);
   border-radius: 5px;
-  color: white;
+  color: var(--secondaryColor);
+  padding: 2vh 3vw;
+  margin: 3vh 0;
+}
+
+.dropdownLarge-header-title {
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 .dropdown-arrow-down {
-  object-fit: contain;
+  width: 3vh;
 }
 
-.dropdownLarge-text-container {
-  color: #ff6060;
+.dropdownLarge-text {
+  margin-bottom: 3vh;
+}
+
+/* Different styles to open and close dropdown menus */
+
+.dropdownLarge-text-container-closed {
+  display: none;
+}
+
+.dropdownLarge-text-container-opened {
+  color: var(--primaryColor);
+  padding: 2vh;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .dropdownLarge-container {
+    margin: 5vh 15vw;
+  }
+
+  .dropdownLarge-header-container {
+    padding: 2vh 2vw;
+  }
+
+  .dropdownLarge-header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .dropdownLarge-text {
+    font-size: 1.5rem;
+  }
 }

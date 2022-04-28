@@ -1,11 +1,11 @@
 :root {
   --secondaryColor: #ffffff;
-  --footer-background-color: #000000;
+  --footerBackgroundColor: #000000;
 }
 
 .footer-container {
-  background-color: var(--footer-background-color);
-  margin-top: 2vw;
+  background-color: var(--footerBackgroundColor);
+  margin-top: 5vh;
   padding: 5vw;
   text-align: center;
 }

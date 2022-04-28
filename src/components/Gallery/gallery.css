@@ -1,7 +1,7 @@
 :root {
   --primaryColor: #ff6060;
   --secondaryColor: #ffffff;
-  --gallery-background-color: #ececec;
+  --mainBackgroundColor: #ececec;
 }
 
 .gallery-container {
@@ -48,7 +48,7 @@
 
 @media screen and (min-width: 992px) {
   .gallery-container {
-    background-color: var(--gallery-background-color);
+    background-color: var(--mainBackgroundColor);
     border-radius: 25px;
     flex-flow: row wrap;
     margin: 0 4vw;
