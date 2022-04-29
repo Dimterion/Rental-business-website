@@ -1,0 +1,20 @@
+.rating-container {
+  width: 100%;
+}
+
+.star-icon {
+  width: 6vw;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .rating-container {
+    margin-top: 2vh;
+    width: auto;
+  }
+
+  .star-icon {
+    width: auto;
+  }
+}

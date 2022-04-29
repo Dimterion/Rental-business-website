@@ -1,8 +1,14 @@
+import "./profile.css";
+
 export default function Profile(props) {
   return (
-    <div>
-      <h4>{props.profileName}</h4>
-      <img src={props.profilePicture} alt={props.profileName} />
+    <div className="profile-container">
+      <h4 className="profile-name">{props.profileName}</h4>
+      <img
+        className="profile-picture"
+        src={props.profilePicture}
+        alt={props.profileName}
+      />
     </div>
   );
 }

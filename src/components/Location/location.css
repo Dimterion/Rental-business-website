@@ -1,0 +1,17 @@
+:root {
+  --primaryColor: #ff6060;
+}
+
+.location-container {
+  color: var(--primaryColor);
+  font-weight: 100;
+  margin: 2vw;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .location-container {
+    margin: 2vh 0;
+  }
+}

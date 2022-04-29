@@ -1,0 +1,25 @@
+:root {
+  --primaryColor: #ff6060;
+  --secondaryColor: #ffffff;
+}
+
+.tag-container {
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--secondaryColor);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
+  padding: 2vw;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .tag-container {
+    padding: 1vh;
+  }
+}

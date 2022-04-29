@@ -1,0 +1,32 @@
+.tags-container {
+  margin: 2vw;
+}
+
+.profile-rating-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2vw;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .information-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 4vw;
+  }
+
+  .tags-container {
+    margin: 0;
+  }
+
+  .profile-rating-container {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+  }
+}

@@ -1,3 +1,5 @@
+import "./tag.css";
+
 export default function Tag(props) {
-  return <div>{props.tagName}</div>;
+  return <div className="tag-container">{props.tagName}</div>;
 }

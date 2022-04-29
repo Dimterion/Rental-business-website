@@ -1,0 +1,37 @@
+.profile-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-name {
+  color: var(--primaryColor);
+  font-weight: 100;
+  margin-right: 1vw;
+  width: 22vw;
+  text-align: end;
+}
+
+.profile-picture {
+  border-radius: 50%;
+
+  width: 30%;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .profile-container {
+    justify-content: flex-end;
+  }
+
+  .profile-picture {
+    margin-left: 0;
+    width: 30%;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+    width: 12vh;
+  }
+}
