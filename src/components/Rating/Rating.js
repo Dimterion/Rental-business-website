@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import starGrey from "../../assets/star-grey.svg";
 import starRed from "../../assets/star-red.svg";
 import "./rating.css";
@@ -57,3 +58,11 @@ export default function Rating(props) {
 
   return <div className="rating-container">{starsArray}</div>;
 }
+
+Rating.propTypes = {
+  rating: PropTypes.string.isRequired,
+};
+
+Rating.defaultProps = {
+  rating: "0",
+};

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./profile.css";
 
 export default function Profile(props) {
@@ -12,3 +13,13 @@ export default function Profile(props) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  profileName: PropTypes.string.isRequired,
+  profilePicture: PropTypes.string.isRequired,
+};
+
+Profile.defaultProps = {
+  profileName: "Profile Name",
+  profilePicture: "",
+};

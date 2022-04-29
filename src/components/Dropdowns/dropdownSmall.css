@@ -1,15 +1,22 @@
 .dropdownSmall-container {
-  background-color: #f6f6f6;
-  border-radius: 5px;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  border-radius: 10px;
+  margin: 3vh 2vw;
 }
 
-.dropdownSmall-header-container {
+.dropdowndropdownSmall-header-container {
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
-  background-color: #ff6060;
+  background-color: var(--primaryColor);
   border-radius: 5px;
-  color: white;
+  color: var(--secondaryColor);
+  padding: 2vw;
+}
+
+.dropdowndropdownSmall-header {
+  font-size: 1.25rem;
+  font-weight: 100;
 }
 
 .dropdown-arrow-down {
@@ -17,5 +24,6 @@
 }
 
 .dropdownSmall-text-container {
-  color: #ff6060;
+  color: var(--primaryColor);
+  background-color: var(--mainBackgroundColor);
 }

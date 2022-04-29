@@ -31,6 +31,8 @@ export default function Apartment() {
   let profileName;
   let profilePicture;
   let rating;
+  let description;
+  let equipments;
   // Using forEach method to create props for each gallery item
   data.forEach((apartment) => {
     if (apartmentId === apartment.id) {
@@ -45,6 +47,11 @@ export default function Apartment() {
       profileName = lowerCaseApartment.host.name;
       profilePicture = lowerCaseApartment.host.picture;
       rating = lowerCaseApartment.rating;
+      description = lowerCaseApartment.description;
+      // Creating array to make a separate component for each amenity
+      equipments = lowerCaseApartment.amenities.map((amenity) => {
+        return <li key={`${amenity}-${lowerCaseApartment.id}`}>{amenity}</li>;
+      });
     }
   });
 
@@ -91,8 +98,8 @@ export default function Apartment() {
         </div>
       </div>
       <div>
-        <DropdownSmall dropDownSmallTitle="Description" />
-        <DropdownSmall dropDownSmallTitle="Equipments" />
+        <DropdownSmall dropDownSmallTitle="Description" text={description} />
+        <DropdownSmall dropDownSmallTitle="Equipments" text={equipments} />
       </div>
     </div>
   );

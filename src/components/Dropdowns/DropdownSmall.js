@@ -1,12 +1,13 @@
+import { useState } from "react";
+import PropTypes from "prop-types";
 import arrowDown from "../../assets/arrow-down.png";
 import arrowUp from "../../assets/arrow-up.png";
 import "./dropdownSmall.css";
-import { useState } from "react";
 
 export default function DropdownSmall(props) {
   const [isOpen, setIsOpen] = useState(false);
 
-  let text = isOpen ? "Text" : "";
+  let text = isOpen ? props.text : "";
   let arrow = isOpen ? arrowUp : arrowDown;
 
   function toggleDropdown() {
@@ -16,7 +17,9 @@ export default function DropdownSmall(props) {
   return (
     <div className="dropdownSmall-container" onClick={toggleDropdown}>
       <span className="dropdowndropdownSmall-header-container">
-        <h2>{props.dropDownSmallTitle}</h2>
+        <h2 className="dropdowndropdownSmall-header">
+          {props.dropDownSmallTitle}
+        </h2>
         <img className="dropdown-arrow-down" src={arrow} alt="Dropdown arrow" />
       </span>
       <div className="dropdownSmall-text-container">
@@ -25,3 +28,11 @@ export default function DropdownSmall(props) {
     </div>
   );
 }
+
+DropdownSmall.propTypes = {
+  dropDownSmallTitle: PropTypes.string.isRequired,
+};
+
+DropdownSmall.defaultProps = {
+  dropDownSmallTitle: "Title",
+};
