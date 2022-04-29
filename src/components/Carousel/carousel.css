@@ -1,31 +1,62 @@
+:root {
+  --secondaryColor: #ffffff;
+}
+
 .carousel-container {
-  margin: 0;
+  margin: 5vh 2vw 0 2vw;
 }
 
 .carousel-image {
-  border-radius: 25px;
+  border-radius: 15px;
   object-fit: cover;
-  height: 45vh;
+  height: 50vh;
   width: 100%;
 }
 
 .left-arrow {
-  object-fit: contain;
+  cursor: pointer;
   position: relative;
-  left: 2vw;
+  left: 3vw;
   top: -28vh;
+  width: 3vh;
 }
 
 .right-arrow {
-  object-fit: contain;
+  cursor: pointer;
   position: relative;
-  left: 85vw;
+  left: 82vw;
   top: -28vh;
+  width: 3vh;
 }
 
 .counter-container {
-  color: white;
+  color: var(--secondaryColor);
   position: relative;
-  left: 39vw;
-  top: -11vh;
+  left: 35vw;
+  top: -10vh;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .carousel-container {
+    margin: 2vh 4vw 0 4vw;
+  }
+
+  .left-arrow {
+    left: 2vw;
+    top: -31vh;
+    width: 5vh;
+  }
+
+  .right-arrow {
+    left: 82vw;
+    top: -31vh;
+    width: 5vh;
+  }
+
+  .counter-container {
+    left: 38vw;
+    top: -14vh;
+  }
 }

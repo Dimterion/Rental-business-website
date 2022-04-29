@@ -49,6 +49,7 @@ export default function Carousel() {
     }
   }
 
+  // Displaying the loading message while the data is loading, then displaying the data itself
   return loading ? (
     <div>Page is loading</div>
   ) : (
