@@ -26,4 +26,15 @@
 .dropdownSmall-text-container {
   color: var(--primaryColor);
   background-color: var(--mainBackgroundColor);
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* Media queries for large screens */
+
+@media screen and (min-width: 992px) {
+  .dropdownSmall-container {
+    margin: 0;
+    width: 40vw;
+  }
 }

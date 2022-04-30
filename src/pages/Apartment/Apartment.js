@@ -27,7 +27,7 @@ export default function Apartment() {
   const { apartmentId } = useParams();
   let title;
   let location;
-  let tagsElements;
+  let tags;
   let profileName;
   let profilePicture;
   let rating;
@@ -37,20 +37,30 @@ export default function Apartment() {
   data.forEach((apartment) => {
     if (apartmentId === apartment.id) {
       const lowerCaseApartment = toLowerKeys(apartment);
-      const tags = lowerCaseApartment.tags;
-      // Creating array to make a separate component for each tag
-      tagsElements = tags.map((tag) => {
-        return <Tag tagName={tag} key={`${tag}-${lowerCaseApartment.id}`} />;
-      });
       title = lowerCaseApartment.title;
       location = lowerCaseApartment.location;
       profileName = lowerCaseApartment.host.name;
       profilePicture = lowerCaseApartment.host.picture;
       rating = lowerCaseApartment.rating;
-      description = lowerCaseApartment.description;
-      // Creating array to make a separate component for each amenity
+      description = (
+        <p className="dropdownSmall-content">
+          {lowerCaseApartment.description}
+        </p>
+      );
+      // Mapping through the tags array to make a separate component for each tag
+      tags = lowerCaseApartment.tags.map((tag) => {
+        return <Tag tagName={tag} key={`${tag}-${lowerCaseApartment.id}`} />;
+      });
+      // Mapping through the amenities array to make a separate component for each amenity
       equipments = lowerCaseApartment.amenities.map((amenity) => {
-        return <li key={`${amenity}-${lowerCaseApartment.id}`}>{amenity}</li>;
+        return (
+          <span
+            className="dropdownSmall-content"
+            key={`${amenity}-${lowerCaseApartment.id}`}
+          >
+            {amenity}
+          </span>
+        );
       });
     }
   });
@@ -90,14 +100,14 @@ export default function Apartment() {
         <div>
           <Title title={title} />
           <Location location={location} />
-          <div className="tags-container">{tagsElements}</div>
+          <div className="tags-container">{tags}</div>
         </div>
         <div className="profile-rating-container">
           <Profile profileName={profileName} profilePicture={profilePicture} />
           <Rating rating={rating} />
         </div>
       </div>
-      <div>
+      <div className="dropdownsSmall-containter">
         <DropdownSmall dropDownSmallTitle="Description" text={description} />
         <DropdownSmall dropDownSmallTitle="Equipments" text={equipments} />
       </div>

@@ -22,17 +22,20 @@ export default function DropdownSmall(props) {
         </h2>
         <img className="dropdown-arrow-down" src={arrow} alt="Dropdown arrow" />
       </span>
-      <div className="dropdownSmall-text-container">
-        <p>{text}</p>
-      </div>
+      <div className="dropdownSmall-text-container">{text}</div>
     </div>
   );
 }
 
 DropdownSmall.propTypes = {
   dropDownSmallTitle: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([
+    PropTypes.array.isRequired,
+    PropTypes.element.isRequired,
+  ]),
 };
 
 DropdownSmall.defaultProps = {
   dropDownSmallTitle: "Title",
+  text: "",
 };
