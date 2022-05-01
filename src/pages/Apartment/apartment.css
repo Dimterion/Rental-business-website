@@ -39,4 +39,9 @@
     justify-content: space-between;
     margin: 4vh 4vw;
   }
+
+  .dropdownSmall-content {
+    font-size: 1.25rem;
+    padding: 1vw;
+  }
 }

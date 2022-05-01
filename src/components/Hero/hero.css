@@ -4,21 +4,25 @@
 
 .hero-container {
   color: var(--secondaryColor);
-  margin: 3vh 2vw;
+  margin: 3vh 2vw 0;
 }
 
 .hero-text {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 100;
   margin: 0 2vw;
-  position: absolute;
-  top: 26vw;
-  width: 25vh;
+  position: relative;
+  top: -12vh;
+  height: 1vh;
+  width: 30vh;
 }
 
 /* Different styles for the image on the Home and About pages */
 
 .hero-img-home {
+  border-radius: 10px;
+  object-fit: cover;
+  height: 15vh;
   width: 100%;
 }
 
@@ -41,8 +45,14 @@
     margin: 0;
     position: relative;
     text-align: center;
-    top: -10vw;
+    top: -15vh;
+    height: 5vh;
     width: 100%;
+  }
+
+  .hero-img-home {
+    object-fit: fill;
+    height: 25vh;
   }
 
   .hero-img-about {

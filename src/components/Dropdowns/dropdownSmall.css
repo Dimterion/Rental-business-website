@@ -1,6 +1,4 @@
 .dropdownSmall-container {
-  background-color: var(--primaryColor);
-  color: var(--secondaryColor);
   border-radius: 10px;
   margin: 3vh 2vw;
 }
@@ -26,6 +24,7 @@
 .dropdownSmall-text-container {
   color: var(--primaryColor);
   background-color: var(--mainBackgroundColor);
+  border-radius: 5px;
   display: flex;
   flex-flow: column wrap;
 }
@@ -36,5 +35,9 @@
   .dropdownSmall-container {
     margin: 0;
     width: 40vw;
+  }
+
+  .dropdowndropdownSmall-header-container {
+    padding: 1vw;
   }
 }
