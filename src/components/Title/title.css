@@ -1,7 +1,3 @@
-:root {
-  --primaryColor: #ff6060;
-}
-
 .title-container {
   color: var(--primaryColor);
   font-size: 1.25rem;

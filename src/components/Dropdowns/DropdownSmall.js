@@ -15,8 +15,8 @@ export default function DropdownSmall(props) {
   }
 
   return (
-    <div className="dropdownSmall-container" onClick={toggleDropdown}>
-      <span className="dropdowndropdownSmall-header-container">
+    <div className="dropdownSmall-container">
+      <span className="dropdowndropdownSmall-header-container" onClick={toggleDropdown}>
         <h2 className="dropdowndropdownSmall-header">
           {props.dropDownSmallTitle}
         </h2>

@@ -1,9 +1,3 @@
-:root {
-  --primaryColor: #ff6060;
-  --secondaryColor: #ffffff;
-  --mainBackgroundColor: #ececec;
-}
-
 .dropdownLarge-container {
   background-color: var(--mainBackgroundColor);
   border-radius: 5px;
@@ -11,6 +5,7 @@
 }
 
 .dropdownLarge-header-container {
+  cursor: pointer;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;

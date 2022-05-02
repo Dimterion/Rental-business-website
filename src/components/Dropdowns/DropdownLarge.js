@@ -18,8 +18,8 @@ export default function DropdownLarge(props) {
   }
 
   return (
-    <div className="dropdownLarge-container" onClick={toggleDropdown}>
-      <span className="dropdownLarge-header-container">
+    <div className="dropdownLarge-container">
+      <span className="dropdownLarge-header-container" onClick={toggleDropdown}>
         <h2 className="dropdownLarge-header-title">{props.title}</h2>
         <img className="dropdown-arrow-down" src={arrow} alt="Dropdown arrow" />
       </span>

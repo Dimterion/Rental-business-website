@@ -1,7 +1,3 @@
-:root {
-  --secondaryColor: #ffffff;
-}
-
 .hero-container {
   color: var(--secondaryColor);
   margin: 3vh 2vw 0;

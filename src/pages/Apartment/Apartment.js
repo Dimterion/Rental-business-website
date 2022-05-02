@@ -7,6 +7,7 @@ import Location from "../../components/Location/Location";
 import Tag from "../../components/Tag/Tag";
 import Profile from "../../components/Profile/Profile";
 import Rating from "../../components/Rating/Rating";
+import Error from "../../components/Error/Error";
 import DropdownSmall from "../../components/Dropdowns/DropdownSmall";
 import "./apartment.css";
 
@@ -25,6 +26,15 @@ export default function Apartment() {
   }
   // Getting the ID from the address link to generate proper content for each gallery item
   const { apartmentId } = useParams();
+
+  // Checking if link id exists in the JSON file; if not - returning the error page
+  const idMatch = data.find((element) => element.id === apartmentId);
+
+  if (!idMatch) {
+    return <Error />;
+  }
+
+  // Variables for the props
   let title;
   let location;
   let tags;
@@ -33,6 +43,7 @@ export default function Apartment() {
   let rating;
   let description;
   let equipments;
+
   // Using forEach method to create props for each gallery item
   data.forEach((apartment) => {
     if (apartmentId === apartment.id) {
@@ -51,17 +62,30 @@ export default function Apartment() {
       tags = lowerCaseApartment.tags.map((tag) => {
         return <Tag tagName={tag} key={`${tag}-${lowerCaseApartment.id}`} />;
       });
-      // Mapping through the amenities array to make a separate component for each amenity
-      equipments = lowerCaseApartment.amenities.map((amenity) => {
-        return (
-          <span
-            className="dropdownSmall-content"
-            key={`${amenity}-${lowerCaseApartment.id}`}
-          >
-            {amenity}
-          </span>
-        );
-      });
+      // Mapping through the amenities or equipments array to make a separate component for each amenity
+      if (lowerCaseApartment.amenities) {
+        equipments = lowerCaseApartment.amenities.map((amenity) => {
+          return (
+            <span
+              className="dropdownSmall-content"
+              key={`${amenity}-${lowerCaseApartment.id}`}
+            >
+              {amenity}
+            </span>
+          );
+        });
+      } else {
+        equipments = lowerCaseApartment.equipments.map((amenity) => {
+          return (
+            <span
+              className="dropdownSmall-content"
+              key={`${amenity}-${lowerCaseApartment.id}`}
+            >
+              {amenity}
+            </span>
+          );
+        });
+      }
     }
   });
 

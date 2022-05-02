@@ -30,6 +30,17 @@ export default function Carousel() {
     return <span>Page is not loading.</span>;
   }
 
+  let rightArrow = "";
+  let leftArrow = "";
+
+  if (counter === 1) {
+    rightArrow = "right-arrow-hidden";
+    leftArrow = "left-arrow-hidden";
+  } else {
+    rightArrow = "right-arrow";
+    leftArrow = "left-arrow";
+  }
+
   // Functions to implement right and left arrows clicks
   function rightArrowClick() {
     if (index < counter - 1) {
@@ -57,13 +68,13 @@ export default function Carousel() {
       <img className="carousel-image" src={url} alt="Apartment overview" />
       <img
         onClick={leftArrowClick}
-        className="left-arrow"
+        className={leftArrow}
         src={arrowLeft}
         alt="Carousel arrow"
       />
       <img
         onClick={rightArrowClick}
-        className="right-arrow"
+        className={rightArrow}
         src={arrowRight}
         alt="Carousel arrow"
       />
