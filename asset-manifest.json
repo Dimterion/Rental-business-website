@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/rental-business-website/static/css/main.77598200.css",
-    "main.js": "/rental-business-website/static/js/main.dc785aae.js",
+    "main.js": "/rental-business-website/static/js/main.edc33ad5.js",
     "static/media/kasa-about-hero-background.png": "/rental-business-website/static/media/kasa-about-hero-background.0c5ab2744fc9b4531788.png",
     "static/media/kasa-hero-background.png": "/rental-business-website/static/media/kasa-hero-background.0767f726b7a036d62365.png",
     "index.html": "/rental-business-website/index.html",
     "static/media/star-grey.svg": "/rental-business-website/static/media/star-grey.38752bcafc1045fa6b545169fb0eb2eb.svg",
     "static/media/star-red.svg": "/rental-business-website/static/media/star-red.a21f8abfc51a23975832b769119429bd.svg",
     "main.77598200.css.map": "/rental-business-website/static/css/main.77598200.css.map",
-    "main.dc785aae.js.map": "/rental-business-website/static/js/main.dc785aae.js.map"
+    "main.edc33ad5.js.map": "/rental-business-website/static/js/main.edc33ad5.js.map"
   },
   "entrypoints": [
     "static/css/main.77598200.css",
-    "static/js/main.dc785aae.js"
+    "static/js/main.edc33ad5.js"
   ]
 }
