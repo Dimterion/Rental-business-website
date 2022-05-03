@@ -6,11 +6,11 @@ import "./header.css";
 export default function Header(props) {
   return (
     <nav className="header-container">
-      <Link to="/">
+      <Link to="/rental-business-website/">
         <img className="header-logo" src={logo} alt="Kasa logo" />
       </Link>
       <div className="header-nav">
-        <Link className={props.headerNavHome} to="/">
+        <Link className={props.headerNavHome} to="/rental-business-website/">
           Home
         </Link>
         <Link className={props.headerNavAbout} to="/about">

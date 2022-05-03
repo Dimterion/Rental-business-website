@@ -45,7 +45,7 @@ export default function Error() {
       <ErrorTextContainer>
         Oops! It looks like this page doesn't exist.
       </ErrorTextContainer>
-      <LinkContainer to="/">Go back to home page</LinkContainer>
+      <LinkContainer to="/rental-business-website/">Go back to home page</LinkContainer>
     </ErrorContainer>
   );
 }

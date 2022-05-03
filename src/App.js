@@ -25,7 +25,7 @@ export default function App() {
     <Router>
       <GlobalStyle />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/rental-business-website/">
           <Home />
         </Route>
         <Route exact path="/about">
