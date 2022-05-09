@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/rental-business-website/static/css/main.77598200.css",
-    "main.js": "/rental-business-website/static/js/main.edc33ad5.js",
-    "static/media/kasa-about-hero-background.png": "/rental-business-website/static/media/kasa-about-hero-background.0c5ab2744fc9b4531788.png",
-    "static/media/kasa-hero-background.png": "/rental-business-website/static/media/kasa-hero-background.0767f726b7a036d62365.png",
-    "index.html": "/rental-business-website/index.html",
-    "static/media/star-grey.svg": "/rental-business-website/static/media/star-grey.38752bcafc1045fa6b545169fb0eb2eb.svg",
-    "static/media/star-red.svg": "/rental-business-website/static/media/star-red.a21f8abfc51a23975832b769119429bd.svg",
-    "main.77598200.css.map": "/rental-business-website/static/css/main.77598200.css.map",
-    "main.edc33ad5.js.map": "/rental-business-website/static/js/main.edc33ad5.js.map"
+    "main.css": "/Rental-business-website/static/css/main.77598200.css",
+    "main.js": "/Rental-business-website/static/js/main.a37e3e89.js",
+    "static/media/kasa-about-hero-background.png": "/Rental-business-website/static/media/kasa-about-hero-background.0c5ab2744fc9b4531788.png",
+    "static/media/kasa-hero-background.png": "/Rental-business-website/static/media/kasa-hero-background.0767f726b7a036d62365.png",
+    "index.html": "/Rental-business-website/index.html",
+    "static/media/star-grey.svg": "/Rental-business-website/static/media/star-grey.38752bcafc1045fa6b545169fb0eb2eb.svg",
+    "static/media/star-red.svg": "/Rental-business-website/static/media/star-red.a21f8abfc51a23975832b769119429bd.svg",
+    "main.77598200.css.map": "/Rental-business-website/static/css/main.77598200.css.map",
+    "main.a37e3e89.js.map": "/Rental-business-website/static/js/main.a37e3e89.js.map"
   },
   "entrypoints": [
     "static/css/main.77598200.css",
-    "static/js/main.edc33ad5.js"
+    "static/js/main.a37e3e89.js"
   ]
 }
