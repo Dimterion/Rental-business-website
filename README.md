@@ -35,8 +35,8 @@ HTML, CSS, JavaScript, React, React Router
 *Install npm packages:*
 `$ npm install`
 
-*Install live-server to run a local server:*
-`$ npm install -g live-server`
-
 *Launch the application:*
 `$ npm start`
+
+*App can be seen at the address:*
+`http://localhost:3000/Rental-business-website`
