@@ -1,7 +1,7 @@
 {
   "name": "kasa",
   "version": "0.1.0",
-  "homepage": "https://dimterion.github.io/rental-business-website/",
+  "homepage": "https://dimterion.github.io/Rental-business-website/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
