@@ -27,7 +27,7 @@ HTML, CSS, JavaScript, React, React Router
 ## How to run the application localy
 
 *Clone the project:*
-`$ git clone https://github.com/Dimterion/Rental-business-website
+`$ git clone https://github.com/Dimterion/Rental-business-website`
 
 *Go to the cloned directory:*
 `$ cd Rental-business-website`
