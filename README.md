@@ -32,7 +32,7 @@ HTML, CSS, JavaScript, React, React Router
 *Go to the cloned directory:*
 `$ cd Rental-business-website`
 
-*Install npm packages (described in package.json):*
+*Install npm packages:*
 `$ npm install`
 
 *Install live-server to run a local server:*
