@@ -38,5 +38,5 @@ HTML, CSS, JavaScript, React, React Router
 *Launch the application:*
 `$ npm start`
 
-*App can be seen at the address:*
+*App can be seen at the following address:*
 `http://localhost:3000/Rental-business-website`
