@@ -17,6 +17,7 @@ HTML, CSS, JavaScript, React, React Router
 - Work on the provided JSON file with the samples information
 - Follow the provided [guidelines](https://course.oc-static.com/projects/Front-End+V2/P9+React+1/Coding+guidelines+Kasa+EN.pdf)
 - Follow the provided [mockups](https://www.figma.com/file/bAmpFq54utImW0ivOqujTN/UI-Design-Kasa-EN-(Copy)?node-id=0%3A1)
+- Use PropTypes for the React components
 
 ## Project goals
 
